@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Signin Tours & Packages | Your Adventure Awaits</title>
+  <link rel="icon" type="image/jpg" href="linkimage.jpg">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
+  <style>
+    /* Applying custom fonts */
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f8fafc; /* slate-50 */
+    }
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    /* Image Carousel Fade Animation */
+    .carousel .fade {
+      animation: fadeEffect 8s infinite;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+    }
+    @keyframes fadeEffect {
+      0%, 100% { opacity: 0; }
+      20%, 80% { opacity: 1; }
+    }
+    .carousel img:nth-child(1) { animation-delay: 0s; }
+    .carousel img:nth-child(2) { animation-delay: 2.5s; }
+    .carousel img:nth-child(3) { animation-delay: 5s; }
+
+    /* Scroll-triggered animations */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    /* Parallax effect for CTA */
+    .parallax-bg {
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+  </style>
+</head>
+<body class="font-sans text-slate-700">
+
+  <nav class="bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-50 transition-all duration-300">
+    <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <a href="index.html" class="flex-shrink-0">
+          <img src="RCMlogo.jpg" alt="Signin Logo" class="h-16 w-auto object-contain">
+        </a>
+        
+        <div class="hidden md:flex items-center space-x-10">
+          <a href="index.html" class="font-medium text-slate-600 hover:text-[#0891b2] transition-colors duration-300">Home</a>
+          <a href="domestic.html" class="font-medium text-slate-600 hover:text-[#0891b2] transition-colors duration-300">Domestic</a>
+          <a href="international.html" class="font-medium text-slate-600 hover:text-[#0891b2] transition-colors duration-300">International</a>
+        </div>
+        
+        <button id="menu-btn" class="md:hidden text-2xl text-slate-800 focus:outline-none">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+    
+    <div id="mobile-menu" class="hidden md:hidden">
+      <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+        <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-cyan-50 hover:text-cyan-700">Home</a>
+        <a href="domestic.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-cyan-50 hover:text-cyan-700">Domestic</a>
+        <a href="international.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-cyan-50 hover:text-cyan-700">International</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="relative w-full h-[90vh] overflow-hidden">
+    <div class="carousel h-full">
+      <img src="images/h1.jpg" alt="Kailash Manasarovar" class="fade">
+      <img src="images/header1.jpg" alt="Burj Khalifa, Dubai" class="fade">
+      <img src="images/header2.jpg" alt="Eiffel Tower, Paris" class="fade">
+    </div>
+    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent"></div>
+    <div class="absolute inset-0 flex flex-col items-center justify-center text-center px-6">
+      <h1 class="text-white text-4xl md:text-6xl lg:text-7xl font-bold leading-tight" style="text-shadow: 2px 2px 8px rgba(0,0,0,0.6);">
+        Explore Unforgettable Journeys
+      </h1>
+      <p class="text-slate-200 text-lg md:text-xl max-w-2xl mt-4">
+        Your next great adventure starts here. Discover breathtaking destinations with our expertly crafted tour packages.
+      </p>
+      <div class="mt-8 flex flex-col sm:flex-row gap-4">
+        <a href="domestic.html" class="bg-[#0891b2] text-white px-8 py-3 font-semibold rounded-full shadow-lg hover:bg-cyan-700 transform hover:scale-105 transition-all duration-300">
+          <i class="fas fa-mountain-sun mr-2"></i>Domestic Tours
+        </a>
+        <a href="international.html" class="bg-[#f59e0b] text-white px-8 py-3 font-semibold rounded-full shadow-lg hover:bg-amber-600 transform hover:scale-105 transition-all duration-300">
+          <i class="fas fa-globe-americas mr-2"></i>International Tours
+        </a>
+      </div>
+    </div>
+  </header>
+  
+  <section class="py-20 bg-white reveal">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="text-center">
+          <p class="font-semibold text-cyan-600">Our Promise</p>
+          <h2 class="text-3xl md:text-4xl font-bold text-slate-800 mt-2">Why Travel With Us</h2>
+          <p class="mt-4 text-lg text-slate-600 max-w-2xl mx-auto">We offer more than just trips; we provide unforgettable experiences with a personal touch.</p>
+      </div>
+      <div class="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 text-center">
+        <div class="flex flex-col items-center">
+            <div class="flex items-center justify-center h-16 w-16 rounded-full bg-cyan-100 text-cyan-600 text-3xl mb-4">
+                <i class="fa-solid fa-map-signs"></i>
+            </div>
+            <h3 class="text-xl font-bold text-slate-800">Expert Itineraries</h3>
+            <p class="text-slate-600 mt-2">Perfectly planned, balanced trips that cover the must-see sights and hidden gems.</p>
+        </div>
+        <div class="flex flex-col items-center">
+            <div class="flex items-center justify-center h-16 w-16 rounded-full bg-cyan-100 text-cyan-600 text-3xl mb-4">
+                <i class="fa-solid fa-gem"></i>
+            </div>
+            <h3 class="text-xl font-bold text-slate-800">Unbeatable Value</h3>
+            <p class="text-slate-600 mt-2">Get the best experience and amenities for your money. No hidden costs.</p>
+        </div>
+        <div class="flex flex-col items-center">
+            <div class="flex items-center justify-center h-16 w-16 rounded-full bg-cyan-100 text-cyan-600 text-3xl mb-4">
+                <i class="fa-solid fa-headset"></i>
+            </div>
+            <h3 class="text-xl font-bold text-slate-800">24/7 Support</h3>
+            <p class="text-slate-600 mt-2">Our team is always available to help you, from the moment you book until you return.</p>
+        </div>
+        <div class="flex flex-col items-center">
+            <div class="flex items-center justify-center h-16 w-16 rounded-full bg-cyan-100 text-cyan-600 text-3xl mb-4">
+                <i class="fa-solid fa-user-shield"></i>
+            </div>
+            <h3 class="text-xl font-bold text-slate-800">Safety First</h3>
+            <p class="text-slate-600 mt-2">We prioritize your safety and well-being with trusted partners and protocols.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="py-20 bg-slate-50 reveal">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="text-center">
+          <p class="font-semibold text-amber-500">Find Your Next Getaway</p>
+          <h2 class="text-3xl md:text-4xl font-bold text-slate-800 mt-2">Trending Tour Packages</h2>
+          <p class="mt-4 text-lg text-slate-600 max-w-2xl mx-auto">Explore our handpicked selection of popular destinations that travelers are loving right now.</p>
+      </div>
+      <div class="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden group transform hover:-translate-y-2 transition-transform duration-300">
+          <div class="relative">
+            <img src="images/egypt.jpg" alt="Mystical Egypt" class="h-60 w-full object-cover">
+            <div class="absolute top-4 right-4 bg-cyan-600 text-white text-sm font-bold px-3 py-1 rounded-full">International</div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-2xl font-bold text-slate-800">Mystical Egypt</h3>
+            <p class="text-slate-600 mt-2">Explore the ancient pyramids, cruise the Nile, and uncover the secrets of the Pharaohs.</p>
+            <div class="flex justify-between items-center mt-6">
+              <div class="text-lg font-bold text-cyan-600">
+                ₹85,000 <span class="text-sm font-normal text-slate-500">/ person</span>
+              </div>
+              <div class="text-slate-600 font-medium">
+                <i class="fa-solid fa-clock mr-1 text-amber-500"></i> 10 Days
+              </div>
+            </div>
+            <a href="#" class="block w-full text-center mt-6 bg-amber-500 text-white font-semibold py-3 rounded-lg hover:bg-amber-600 transition-colors duration-300">View Details</a>
+          </div>
+        </div>
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden group transform hover:-translate-y-2 transition-transform duration-300">
+          <div class="relative">
+            <img src="images/kerala.png" alt="Kerala Backwaters" class="h-60 w-full object-cover">
+            <div class="absolute top-4 right-4 bg-cyan-600 text-white text-sm font-bold px-3 py-1 rounded-full">Domestic</div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-2xl font-bold text-slate-800">Kerala Backwaters</h3>
+            <p class="text-slate-600 mt-2">Relax on a traditional houseboat and experience the serene beauty of God's Own Country.</p>
+            <div class="flex justify-between items-center mt-6">
+              <div class="text-lg font-bold text-cyan-600">
+                ₹25,000 <span class="text-sm font-normal text-slate-500">/ person</span>
+              </div>
+              <div class="text-slate-600 font-medium">
+                <i class="fa-solid fa-clock mr-1 text-amber-500"></i> 6 Days
+              </div>
+            </div>
+            <a href="#" class="block w-full text-center mt-6 bg-amber-500 text-white font-semibold py-3 rounded-lg hover:bg-amber-600 transition-colors duration-300">View Details</a>
+          </div>
+        </div>
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden group transform hover:-translate-y-2 transition-transform duration-300">
+          <div class="relative">
+            <img src="images/australia.png" alt="Australian Outback" class="h-60 w-full object-cover">
+            <div class="absolute top-4 right-4 bg-cyan-600 text-white text-sm font-bold px-3 py-1 rounded-full">International</div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-2xl font-bold text-slate-800">Australian Adventure</h3>
+            <p class="text-slate-600 mt-2">From the vibrant Great Barrier Reef to the rugged Outback, an adventure awaits.</p>
+            <div class="flex justify-between items-center mt-6">
+              <div class="text-lg font-bold text-cyan-600">
+                ₹1,50,000 <span class="text-sm font-normal text-slate-500">/ person</span>
+              </div>
+              <div class="text-slate-600 font-medium">
+                <i class="fa-solid fa-clock mr-1 text-amber-500"></i> 12 Days
+              </div>
+            </div>
+            <a href="#" class="block w-full text-center mt-6 bg-amber-500 text-white font-semibold py-3 rounded-lg hover:bg-amber-600 transition-colors duration-300">View Details</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="py-20 bg-white reveal">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="text-center">
+        <p class="font-semibold text-cyan-600">Our Happy Travelers</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-slate-800 mt-2">What Our Clients Say</h2>
+        <p class="mt-4 text-lg text-slate-600 max-w-2xl mx-auto">Real stories from travelers who explored the world with us.</p>
+      </div>
+      <div class="mt-16 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-slate-50 p-8 rounded-xl shadow-sm border border-slate-100 transform hover:-translate-y-2 transition-transform duration-300">
+          <i class="fa-solid fa-quote-left text-cyan-200 text-5xl"></i>
+          <p class="text-slate-600 italic mt-4">“Our trip to Dubai was unforgettable! The arrangements were flawless from start to finish. Highly recommended!”</p>
+          <div class="mt-6 flex items-center">
+            <div class="ml-4">
+              <h4 class="font-bold text-slate-900">– Anjali, Hyderabad</h4>
+              <p class="text-sm text-slate-500">Dubai Explorer Package</p>
+            </div>
+          </div>
+        </div>
+        <div class="bg-slate-50 p-8 rounded-xl shadow-sm border border-slate-100 transform hover:-translate-y-2 transition-transform duration-300">
+          <i class="fa-solid fa-quote-left text-cyan-200 text-5xl"></i>
+          <p class="text-slate-600 italic mt-4">“The Kerala backwaters were magical. Thanks to Signin Travel for a smooth and perfectly planned journey!”</p>
+          <div class="mt-6 flex items-center">
+            <div class="ml-4">
+              <h4 class="font-bold text-slate-900">– Ramesh, Tirupati</h4>
+              <p class="text-sm text-slate-500">Kerala Backwaters Tour</p>
+            </div>
+          </div>
+        </div>
+        <div class="bg-slate-50 p-8 rounded-xl shadow-sm border border-slate-100 transform hover:-translate-y-2 transition-transform duration-300">
+          <i class="fa-solid fa-quote-left text-cyan-200 text-5xl"></i>
+          <p class="text-slate-600 italic mt-4">“Paris was a dream come true! Best tour planning experience. Every detail was meticulously handled.”</p>
+          <div class="mt-6 flex items-center">
+            <div class="ml-4">
+              <h4 class="font-bold text-slate-900">– Priya, Bengaluru</h4>
+              <p class="text-sm text-slate-500">European Dreams Package</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 bg-slate-50 reveal">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="text-center">
+        <p class="font-semibold text-amber-500">Memories from our trips</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-slate-800 mt-2">Traveler's Gallery</h2>
+        <p class="mt-4 text-lg text-slate-600 max-w-2xl mx-auto">A glimpse into the beautiful moments captured by our travelers.</p>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-16">
+        <div class="group relative overflow-hidden rounded-xl col-span-2 row-span-2">
+          <img src="images/h1.jpg" alt="Manasarovar" class="h-full w-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+          <div class="absolute inset-0 bg-black/20 group-hover:bg-black/50 transition-all duration-300"></div>
+          <p class="absolute bottom-4 left-4 text-white font-bold text-lg">Manasarovar</p>
+        </div>
+        <div class="group relative overflow-hidden rounded-xl">
+          <img src="B1.jpg" alt="Bali" class="h-full w-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+          <div class="absolute inset-0 bg-black/20 group-hover:bg-black/50 transition-all duration-300"></div>
+          <p class="absolute bottom-4 left-4 text-white font-bold text-lg">Bali</p>
+        </div>
+        <div class="group relative overflow-hidden rounded-xl">
+          <img src="d1.jpg" alt="Dubai" class="h-full w-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+          <div class="absolute inset-0 bg-black/20 group-hover:bg-black/50 transition-all duration-300"></div>
+          <p class="absolute bottom-4 left-4 text-white font-bold text-lg">Dubai</p>
+        </div>
+        <div class="group relative overflow-hidden rounded-xl">
+          <img src="images/ooty.png" alt="Ooty" class="h-full w-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+          <div class="absolute inset-0 bg-black/20 group-hover:bg-black/50 transition-all duration-300"></div>
+          <p class="absolute bottom-4 left-4 text-white font-bold text-lg">Ooty</p>
+        </div>
+        <div class="group relative overflow-hidden rounded-xl">
+          <img src="images/aaraku.png" alt="Araku" class="h-full w-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+          <div class="absolute inset-0 bg-black/20 group-hover:bg-black/50 transition-all duration-300"></div>
+          <p class="absolute bottom-4 left-4 text-white font-bold text-lg">Araku Valley</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="relative py-24 bg-cover bg-center parallax-bg" style="background-image: url('images/header1.jpg');">
+    <div class="absolute inset-0 bg-slate-900/60 backdrop-blur-sm"></div>
+    <div class="relative max-w-4xl mx-auto text-center px-6">
+      <h2 class="text-white text-4xl md:text-5xl font-bold">Ready For Your Next Adventure?</h2>
+      <p class="text-slate-200 text-lg mt-4 max-w-2xl mx-auto">Let us help you plan the perfect trip. Our travel experts are here to create a customized itinerary just for you. Contact us today!</p>
+      <a href="https://wa.me/918886660608" target="_blank" class="inline-block mt-8 bg-amber-500 text-white px-10 py-4 font-semibold rounded-full shadow-lg hover:bg-amber-600 transform hover:scale-105 transition-all duration-300">
+        <i class="fa-solid fa-paper-plane mr-2"></i> Plan My Trip Now
+      </a>
+    </div>
+  </section>
+  <footer class="bg-slate-800 text-slate-300">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 py-16 grid gap-12 md:grid-cols-12">
+      <div class="md:col-span-4">
+        <img src="RCMlogo.jpg" alt="Signin Logo" class="h-16 mb-4 bg-white rounded-md p-1">
+        <p class="text-slate-400">Crafting memorable journeys and seamless travel experiences for adventurers worldwide.</p>
+        <div class="flex space-x-4 mt-6">
+          <a href="#" class="text-slate-400 hover:text-cyan-400 transition-colors duration-300"><i class="fab fa-facebook text-2xl"></i></a>
+          <a href="#" class="text-slate-400 hover:text-cyan-400 transition-colors duration-300"><i class="fab fa-instagram text-2xl"></i></a>
+          <a href="https://wa.me/918886660608" class="text-slate-400 hover:text-cyan-400 transition-colors duration-300"><i class="fab fa-whatsapp text-2xl"></i></a>
+        </div>
+      </div>
+      
+      <div class="md:col-span-2">
+        <h3 class="text-lg font-semibold text-white mb-4">Our Branches</h3>
+        <ul class="space-y-2 text-slate-400 text-sm">
+          <li>Tirupati</li>
+          <li>Visakhapatnam</li>
+          <li>Hyderabad</li>
+          <li>Dubai</li>
+          <li>Bengaluru</li>
+          <li>Rajahmundry</li>
+        </ul>
+      </div>
+
+      <div class="md:col-span-3">
+        <h3 class="text-lg font-semibold text-white mb-4">Our Websites</h3>
+        <ul class="space-y-2 text-sm">
+          <li><a href="https://signin.in" target="_blank" class="hover:text-cyan-400 transition-colors duration-300">signin.in</a></li>
+          <li><a href="https://signinrcm.com" target="_blank" class="hover:text-cyan-400 transition-colors duration-300">signinrcm.com</a></li>
+          <li><a href="https://signingroup.in" target="_blank" class="hover:text-cyan-400 transition-colors duration-300">signingroup.in</a></li>
+          <li><a href="https://vedhikexports.com" target="_blank" class="hover:text-cyan-400 transition-colors duration-300">vedhikexports.com</a></li>
+        </ul>
+      </div>
+
+      <div class="md:col-span-3">
+        <h3 class="text-lg font-semibold text-white mb-4">Contact Us</h3>
+        <ul class="space-y-3 text-sm">
+          <li class="flex items-start space-x-3">
+            <i class="fas fa-map-marker-alt text-amber-400 mt-1"></i>
+            <span>Signin Tours & Travels, Tirupati, Andhra Pradesh, India</span>
+          </li>
+          <li class="flex items-center space-x-3">
+            <i class="fas fa-envelope text-amber-400"></i>
+            <a href="mailto:Contact@signin.in" class="hover:text-cyan-400 transition-colors duration-300">Contact@signin.in</a>
+          </li>
+          <li class="flex items-center space-x-3">
+            <i class="fas fa-phone text-amber-400"></i>
+            <a href="tel:+918886660608" class="hover:text-cyan-400 transition-colors duration-300">+91 8886660608</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="bg-slate-900 py-4">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center text-sm text-slate-500">
+        © <span id="year"></span> All Rights Reserved | Designed & Developed by 
+        <span class="text-amber-500 font-semibold">Signin Tec</span>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/918886660608" target="_blank" class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transform hover:scale-110 transition-all duration-300 z-40">
+    <i class="fab fa-whatsapp text-2xl"></i>
+  </a>
+  
+  <script>
+    // Mobile Menu Toggle
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Set current year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Scroll Reveal Animation
+    const revealElements = document.querySelectorAll('.reveal');
+    const revealOnScroll = () => {
+      const windowHeight = window.innerHeight;
+      revealElements.forEach(el => {
+        const elementTop = el.getBoundingClientRect().top;
+        if (elementTop < windowHeight - 100) { // Reveal when 100px from bottom
+          el.classList.add('visible');
+        }
+      });
+    };
+    window.addEventListener('scroll', revealOnScroll);
+    revealOnScroll(); // Check on page load as well
+  </script>
+
+</body>
+</html>

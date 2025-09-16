@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>International Packages | Signin Tours & Packages</title>
+  <link rel="icon" type="image/jpg" href="linkimage.jpg">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
+  <style>
+    /* Applying custom fonts */
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f8fafc; /* slate-50 */
+    }
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    /* Scroll-triggered animations */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body class="font-sans text-slate-700">
+
+  <nav class="bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-50 transition-all duration-300">
+    <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <a href="index.html" class="flex-shrink-0">
+          <img src="RCMlogo.jpg" alt="Signin Logo" class="h-16 w-auto object-contain">
+        </a>
+        
+        <div class="hidden md:flex items-center space-x-10">
+          <a href="index.html" class="font-medium text-slate-600 hover:text-cyan-600 transition-colors duration-300">Home</a>
+          <a href="domestic.html" class="font-medium text-slate-600 hover:text-cyan-600 transition-colors duration-300">Domestic</a>
+          <a href="international.html" class="font-bold text-cyan-600">International</a>
+        </div>
+        
+        <button id="menu-btn" class="md:hidden text-2xl text-slate-800 focus:outline-none">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+    
+    <div id="mobile-menu" class="hidden md:hidden">
+      <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+        <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-cyan-50 hover:text-cyan-700">Home</a>
+        <a href="domestic.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-cyan-50 hover:text-cyan-700">Domestic</a>
+        <a href="international.html" class="block px-3 py-2 rounded-md text-base font-medium bg-cyan-50 text-cyan-700">International</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="relative h-60 md:h-80 bg-cover bg-center" style="background-image: url('images/europe.jpg');">
+    <div class="absolute inset-0 bg-slate-900/50"></div>
+    <div class="relative max-w-7xl mx-auto h-full flex flex-col justify-center items-center text-center px-6">
+      <h1 class="text-white text-4xl md:text-6xl font-bold" style="text-shadow: 2px 2px 8px rgba(0,0,0,0.6);">
+        Discover the World's Wonders
+      </h1>
+      <p class="text-slate-200 text-lg md:text-xl max-w-2xl mt-4">
+        From futuristic cities to tropical paradises, your global adventure starts here.
+      </p>
+    </div>
+  </header>
+
+  <main class="py-20">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 reveal">
+        
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden group transform hover:-translate-y-2 transition-transform duration-300">
+          <div class="relative">
+            <img src="images/dubai.jpg" alt="Dubai Skyline" class="h-60 w-full object-cover">
+            <div class="absolute top-4 left-4 bg-amber-500 text-white text-xs font-bold px-3 py-1 rounded-full">Most Popular</div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-2xl font-bold text-slate-800">Futuristic Dubai</h3>
+            <p class="text-slate-600 mt-2 h-12">Experience the glamour of Dubai with its towering, desert safaris, and luxury shopping.</p>
+            <div class="flex items-center mt-4 space-x-4 text-sm text-slate-700">
+                <span class="flex items-center"><i class="fa-solid fa-clock mr-2 text-cyan-600"></i>4 Nights / 5 Days</span>
+                <span class="flex items-center"><i class="fa-solid fa-plane-departure mr-2 text-cyan-600"></i>Flights Included</span>
+            </div>
+            <div class="mt-6 flex justify-between items-center">
+                <span class="text-xl font-bold text-cyan-600">₹65,000 <small class="font-normal text-slate-500">/ person</small></span>
+                <a href="https://wa.me/918886660608" target="_blank" class="text-green-500 font-semibold hover:text-green-600 transition-colors">Enquire Now</a>
+            </div>
+            <a href="pdf/DUBAI_4N5D.pdf" target="_blank" class="block w-full text-center mt-4 bg-amber-500 text-white font-semibold py-3 rounded-lg hover:bg-amber-600 transition-colors duration-300">View Itinerary</a>
+          </div>
+        </div>
+        
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden group transform hover:-translate-y-2 transition-transform duration-300">
+          <div class="relative">
+            <img src="images/thailand.jpg" alt="Thailand beaches" class="h-60 w-full object-cover">
+            <div class="absolute top-4 left-4 bg-amber-500 text-white text-xs font-bold px-3 py-1 rounded-full">Most Popular</div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-2xl font-bold text-slate-800">Treasures of Thailand</h3>
+            <p class="text-slate-600 mt-2 h-12">Explore stunning beaches, ornate temples, and the bustling city life of Bangkok and Pattaya.</p>
+            <div class="flex items-center mt-4 space-x-4 text-sm text-slate-700">
+                <span class="flex items-center"><i class="fa-solid fa-clock mr-2 text-cyan-600"></i>4 Nights / 5 Days</span>
+                <span class="flex items-center"><i class="fa-solid fa-umbrella-beach mr-2 text-cyan-600"></i>Island Tour</span>
+            </div>
+            <div class="mt-6 flex justify-between items-center">
+                <span class="text-xl font-bold text-cyan-600">₹45,000 <small class="font-normal text-slate-500">/ person</small></span>
+                <a href="https://wa.me/918886660608" target="_blank" class="text-green-500 font-semibold hover:text-green-600 transition-colors">Enquire Now</a>
+            </div>
+            <a href="pdf/THAILAND.pdf" target="_blank" class="block w-full text-center mt-4 bg-amber-500 text-white font-semibold py-3 rounded-lg hover:bg-amber-600 transition-colors duration-300">View Itinerary</a>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden group transform hover:-translate-y-2 transition-transform duration-300">
+          <div class="relative">
+            <img src="images/bali.jpeg" alt="Bali rice terraces" class="h-60 w-full object-cover">
+             <div class="absolute top-4 left-4 bg-amber-500 text-white text-xs font-bold px-3 py-1 rounded-full">Best Pick</div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-2xl font-bold text-slate-800">Blissful Bali</h3>
+            <p class="text-slate-600 mt-2 h-12">Immerse yourself in the spiritual culture, lush landscapes, and volcanic mountains of Bali.</p>
+            <div class="flex items-center mt-4 space-x-4 text-sm text-slate-700">
+                <span class="flex items-center"><i class="fa-solid fa-clock mr-2 text-cyan-600"></i>6 Nights / 7 Days</span>
+                 <span class="flex items-center"><i class="fa-solid fa-water mr-2 text-cyan-600"></i>Water Sports</span>
+            </div>
+            <div class="mt-6 flex justify-between items-center">
+                <span class="text-xl font-bold text-cyan-600">₹55,000 <small class="font-normal text-slate-500">/ person</small></span>
+                <a href="https://wa.me/918886660608" target="_blank" class="text-green-500 font-semibold hover:text-green-600 transition-colors">Enquire Now</a>
+            </div>
+            <a href="pdf/BALI.pdf" target="_blank" class="block w-full text-center mt-4 bg-amber-500 text-white font-semibold py-3 rounded-lg hover:bg-amber-600 transition-colors duration-300">View Itinerary</a>
+          </div>
+        </div>
+        
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden group transform hover:-translate-y-2 transition-transform duration-300">
+          <div class="relative">
+            <img src="images/SwithM.jpg" alt="Singapore Skyline" class="h-60 w-full object-cover">
+            <div class="absolute top-4 left-4 bg-amber-500 text-white text-xs font-bold px-3 py-1 rounded-full">2 Countries</div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-2xl font-bold text-slate-800">Singapore & Malaysia</h3>
+            <p class="text-slate-600 mt-2 h-12">Enjoy the best, from the modern metropolis of Singapore to the rich culture of Kuala Lumpur.</p>
+            <div class="flex items-center mt-4 space-x-4 text-sm text-slate-700">
+                <span class="flex items-center"><i class="fa-solid fa-clock mr-2 text-cyan-600"></i>5 Nights / 6 Days</span>
+                <span class="flex items-center"><i class="fa-solid fa-city mr-2 text-cyan-600"></i>City Tours</span>
+            </div>
+            <div class="mt-6 flex justify-between items-center">
+                <span class="text-xl font-bold text-cyan-600">₹80,000 <small class="font-normal text-slate-500">/ person</small></span>
+                <a href="https://wa.me/918886660608" target="_blank" class="text-green-500 font-semibold hover:text-green-600 transition-colors">Enquire Now</a>
+            </div>
+            <a href="pdf/MALASIYA WITH SINGAPORE.pdf" target="_blank" class="block w-full text-center mt-4 bg-amber-500 text-white font-semibold py-3 rounded-lg hover:bg-amber-600 transition-colors duration-300">View Itinerary</a>
+          </div>
+        </div>
+        
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden group transform hover:-translate-y-2 transition-transform duration-300">
+          <div class="relative">
+            <img src="images/cruise.jpeg" alt="Cruise Ship" class="h-60 w-full object-cover">
+          </div>
+          <div class="p-6">
+            <h3 class="text-2xl font-bold text-slate-800">Asia with Cruise</h3>
+            <p class="text-slate-600 mt-2 h-12">An ultimate luxury experience combining Singapore, Malaysia, and cruise adventure.</p>
+            <div class="flex items-center mt-4 space-x-4 text-sm text-slate-700">
+                <span class="flex items-center"><i class="fa-solid fa-clock mr-2 text-cyan-600"></i>6 Nights / 8 Days</span>
+                <span class="flex items-center"><i class="fa-solid fa-ship mr-2 text-cyan-600"></i>Cruise Included</span>
+            </div>
+            <div class="mt-6 flex justify-between items-center">
+                <span class="text-xl font-bold text-cyan-600">₹1,10,000 <small class="font-normal text-slate-500">/ person</small></span>
+                <a href="https://wa.me/918886660608" target="_blank" class="text-green-500 font-semibold hover:text-green-600 transition-colors">Enquire Now</a>
+            </div>
+            <a href="pdf/MALASIYA WITH SINGAPORE WITH CRUISE.pdf" target="_blank" class="block w-full text-center mt-4 bg-amber-500 text-white font-semibold py-3 rounded-lg hover:bg-amber-600 transition-colors duration-300">View Itinerary</a>
+          </div>
+        </div>
+        
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden group transform hover:-translate-y-2 transition-transform duration-300">
+          <div class="relative">
+            <img src="images/europe.jpg" alt="Eiffel Tower, Paris" class="h-60 w-full object-cover">
+          </div>
+          <div class="p-6">
+            <h3 class="text-2xl font-bold text-slate-800">European Dream</h3>
+            <p class="text-slate-600 mt-2 h-12">Embark on a grand tour of Europe's iconic cities, from  Paris to the history of Rome.</p>
+            <div class="flex items-center mt-4 space-x-4 text-sm text-slate-700">
+                <span class="flex items-center"><i class="fa-solid fa-clock mr-2 text-cyan-600"></i>13 Nights / 14 Days</span>
+                <span class="flex items-center"><i class="fa-solid fa-landmark-flag mr-2 text-cyan-600"></i>Multi-Country</span>
+            </div>
+            <div class="mt-6 flex justify-between items-center">
+                <span class="text-xl font-bold text-cyan-600">₹2,50,000 <small class="font-normal text-slate-500">/ person</small></span>
+                <a href="https://wa.me/918886660608" target="_blank" class="text-green-500 font-semibold hover:text-green-600 transition-colors">Enquire Now</a>
+            </div>
+            <a href="pdf/EUROPEAN.pdf" target="_blank" class="block w-full text-center mt-4 bg-amber-500 text-white font-semibold py-3 rounded-lg hover:bg-amber-600 transition-colors duration-300">View Itinerary</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-slate-800 text-slate-300">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 py-16 grid gap-12 md:grid-cols-12">
+      <div class="md:col-span-4">
+        <img src="RCMlogo.jpg" alt="Signin Logo" class="h-16 mb-4 bg-white rounded-md p-1">
+        <p class="text-slate-400">Crafting memorable journeys and seamless travel experiences for adventurers worldwide.</p>
+        <div class="flex space-x-4 mt-6">
+          <a href="#" class="text-slate-400 hover:text-cyan-400 transition-colors duration-300"><i class="fab fa-facebook text-2xl"></i></a>
+          <a href="#" class="text-slate-400 hover:text-cyan-400 transition-colors duration-300"><i class="fab fa-instagram text-2xl"></i></a>
+          <a href="https://wa.me/918886660608" class="text-slate-400 hover:text-cyan-400 transition-colors duration-300"><i class="fab fa-whatsapp text-2xl"></i></a>
+        </div>
+      </div>
+      
+      <div class="md:col-span-2">
+        <h3 class="text-lg font-semibold text-white mb-4">Our Branches</h3>
+        <ul class="space-y-2 text-slate-400 text-sm">
+          <li>Tirupati</li>
+          <li>Visakhapatnam</li>
+          <li>Hyderabad</li>
+          <li>Dubai</li>
+          <li>Bengaluru</li>
+          <li>Rajahmundry</li>
+        </ul>
+      </div>
+
+      <div class="md:col-span-3">
+        <h3 class="text-lg font-semibold text-white mb-4">Our Websites</h3>
+        <ul class="space-y-2 text-sm">
+          <li><a href="https://signin.in" target="_blank" class="hover:text-cyan-400 transition-colors duration-300">signin.in</a></li>
+          <li><a href="https://signinrcm.com" target="_blank" class="hover:text-cyan-400 transition-colors duration-300">signinrcm.com</a></li>
+          <li><a href="https://signingroup.in" target="_blank" class="hover:text-cyan-400 transition-colors duration-300">signingroup.in</a></li>
+          <li><a href="https://vedhikexports.com" target="_blank" class="hover:text-cyan-400 transition-colors duration-300">vedhikexports.com</a></li>
+        </ul>
+      </div>
+
+      <div class="md:col-span-3">
+        <h3 class="text-lg font-semibold text-white mb-4">Contact Us</h3>
+        <ul class="space-y-3 text-sm">
+          <li class="flex items-start space-x-3">
+            <i class="fas fa-map-marker-alt text-amber-400 mt-1"></i>
+            <span>Signin Tours & Travels, Tirupati, Andhra Pradesh, India</span>
+          </li>
+          <li class="flex items-center space-x-3">
+            <i class="fas fa-envelope text-amber-400"></i>
+            <a href="mailto:Contact@signin.in" class="hover:text-cyan-400 transition-colors duration-300">Contact@signin.in</a>
+          </li>
+          <li class="flex items-center space-x-3">
+            <i class="fas fa-phone text-amber-400"></i>
+            <a href="tel:+918886660608" class="hover:text-cyan-400 transition-colors duration-300">+91 8886660608</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="bg-slate-900 py-4">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center text-sm text-slate-500">
+        © <span id="year"></span> All Rights Reserved | Designed & Developed by 
+        <span class="text-amber-500 font-semibold">Signin Tec</span>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/918886660608" target="_blank" class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transform hover:scale-110 transition-all duration-300 z-40">
+    <i class="fab fa-whatsapp text-2xl"></i>
+  </a>
+  
+  <script>
+    // Mobile Menu Toggle
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Set current year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Scroll Reveal Animation
+    const revealElements = document.querySelectorAll('.reveal');
+    const revealOnScroll = () => {
+      const windowHeight = window.innerHeight;
+      revealElements.forEach(el => {
+        const elementTop = el.getBoundingClientRect().top;
+        if (elementTop < windowHeight - 100) { // Reveal when 100px from bottom
+          el.classList.add('visible');
+        }
+      });
+    };
+    window.addEventListener('scroll', revealOnScroll);
+    revealOnScroll(); // Check on page load as well
+  </script>
+
+</body>
+</html>
